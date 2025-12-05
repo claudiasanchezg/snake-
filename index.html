@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Culture Snake / Comecocos Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #000018;
+      color: #fefefe;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+    }
+
+    h1 {
+      margin: 16px 0 4px;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    #info {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      text-align: center;
+      max-width: 480px;
+    }
+
+    #scoreboard {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    #game {
+      background: #020230;
+      border: 2px solid #1affff;
+      box-shadow: 0 0 12px #1affff;
+    }
+
+    #start-btn {
+      margin-top: 8px;
+      padding: 6px 14px;
+      border-radius: 4px;
+      border: 1px solid #1affff;
+      background: #020230;
+      color: #fefefe;
+      cursor: pointer;
+    }
+
+    #start-btn:hover {
+      background: #041a4a;
+    }
+
+    /* Quiz modal */
+    #quiz-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    #quiz-box {
+      background: #020230;
+      border: 2px solid #1affff;
+      padding: 16px;
+      max-width: 320px;
+      width: 90%;
+      box-shadow: 0 0 12px #1affff;
+      color: #fefefe;
+      font-size: 0.95rem;
+    }
+
+    #quiz-question {
+      margin-bottom: 12px;
+    }
+
+    .quiz-option {
+      display: block;
+      width: 100%;
+      margin-bottom: 6px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid #1affff;
+      background: #041a4a;
+      color: #fefefe;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .quiz-option:hover {
+      background: #06246b;
+    }
+
+    .quiz-option.correct {
+      background: #177a3a !important;
+      border-color: #00ff7f !important;
+    }
+
+    .quiz-option.incorrect {
+      background: #8b1a1a !important;
+      border-color: #ff4c4c !important;
+    }
+
+    #quiz-feedback {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      min-height: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Culture Snake / Comecocos Quiz</h1>
+  <div id="info">
+    Use the arrow keys to move. Every time you eat a glowing dot, answer a short multiple-choice question.
+  </div>
+
+  <div id="scoreboard">
+    Score: <span id="score">0</span> · High score: <span id="high-score">0</span>
+  </div>
+
+  <canvas id="game" width="400" height="400"></canvas>
+
+  <button id="start-btn">Start / Restart</button>
+
+  <!-- Quiz modal -->
+  <div id="quiz-modal">
+    <div id="quiz-box">
+      <div id="quiz-question"></div>
+      <div id="quiz-options"></div>
+      <div id="quiz-feedback"></div>
+    </div>
+  </div>
+
+  <!-- Game logic -->
+  <script src="main.js"></script>
+</body>
+</html>
