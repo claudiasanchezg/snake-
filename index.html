@@ -37,7 +37,7 @@
     }
 
     #controls {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       font-size: 0.9rem;
       display: flex;
       flex-wrap: wrap;
@@ -65,10 +65,48 @@
       text-align: center;
     }
 
+    #game-row {
+      margin-top: 4px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
     #game {
       background: #020230;
       border: 2px solid #1affff;
       box-shadow: 0 0 12px #1affff;
+    }
+
+    #level-box {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    #level-label {
+      margin-bottom: 2px;
+    }
+
+    #level-bar {
+      width: 16px;
+      height: 200px;
+      border: 1px solid #1affff;
+      background: #020230;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 4px auto;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    #level-fill {
+      width: 100%;
+      height: 10%; /* Level 1 of 10 */
+      background: linear-gradient(#1affff, #00ff7f);
+    }
+
+    #level-text {
+      margin-top: 2px;
     }
 
     #start-btn {
@@ -166,7 +204,17 @@
   </div>
   <div id="topic-warning"></div>
 
-  <canvas id="game" width="400" height="400"></canvas>
+  <div id="game-row">
+    <canvas id="game" width="400" height="400"></canvas>
+
+    <div id="level-box">
+      <div id="level-label">Level</div>
+      <div id="level-bar">
+        <div id="level-fill"></div>
+      </div>
+      <div id="level-text">1 / 10</div>
+    </div>
+  </div>
 
   <button id="start-btn">Start / Restart</button>
 
