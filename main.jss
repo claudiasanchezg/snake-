@@ -4,6 +4,7 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+console.log("game started")
 const scoreEl = document.getElementById("score");
 const highScoreEl = document.getElementById("high-score");
 const startBtn = document.getElementById("start-btn");
