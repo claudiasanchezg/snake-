@@ -34,64 +34,26 @@ let gameSpeedMs = 120;
 let isGameOver = false;
 
 // Quiz state
-const questionsByCategory = {
-  geography: [
-    {
-      text: "Which river flows through Cairo?",
-      options: ["Nile", "Amazon", "Danube"],
-      correctIndex: 0
-    },
-    {
-      text: "Which country has the largest land area?",
-      options: ["Canada", "Russia", "China"],
-      correctIndex: 1
-    },
-    {
-      text: "Which city lies on two continents, Europe and Asia?",
-      options: ["Istanbul", "Athens", "Cairo"],
-      correctIndex: 0
-    }
-  ],
-  culture: [
-    {
-      text: "Which country is famous for the Day of the Dead celebration?",
-      options: ["Mexico", "Japan", "Italy"],
-      correctIndex: 0
-    },
-    {
-      text: "Which genre is associated with reggae music?",
-      options: ["Jamaica", "Brazil", "South Africa"],
-      correctIndex: 0
-    },
-    {
-      text: "Which city is widely known for its opera house shaped like white sails?",
-      options: ["Sydney", "Vienna", "Milan"],
-      correctIndex: 0
-    }
-  ],
-  history: [
-    {
-      text: "In which century did the French Revolution begin?",
-      options: ["17th century", "18th century", "19th century"],
-      correctIndex: 1
-    },
-    {
-      text: "Which empire built the Colosseum in Rome?",
-      options: ["Greek Empire", "Roman Empire", "Ottoman Empire"],
-      correctIndex: 1
-    },
-    {
-      text: "The Silk Road mainly connected Europe with which region?",
-      options: ["Africa", "Oceania", "Asia"],
-      correctIndex: 2
-    }
-  ]
-};
 
+// ---- Quiz state loaded from JSON ----
+let questionsByCategory = {};
 let currentCategoryKey = "";
 let currentCategoryQuestions = [];
 let currentQuestionIndex = -1;
 let pendingQuestion = false;
+let questionsLoaded = false;
+
+// Load questions.json once when the page loads
+fetch("questions.json")
+  .then(res => res.json())
+  .then(data => {
+    questionsByCategory = data;
+    questionsLoaded = true;
+  })
+  .catch(err => {
+    console.error("Error loading questions:", err);
+  });
+
 
 // -------- Helpers --------
 function randomInt(min, maxExclusive) {
