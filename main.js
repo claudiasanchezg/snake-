@@ -11,7 +11,7 @@ const startBtn = document.getElementById("start-btn");
 const topicSelect = document.getElementById("topic-select");
 const topicWarning = document.getElementById("topic-warning");
 
-// Level / progress bar
+// Progress bar
 const levelFill = document.getElementById("level-fill");
 const levelText = document.getElementById("level-text");
 
@@ -39,7 +39,7 @@ let isGameOver = false;
 
 // Progress (correct answers in this run)
 let correctThisRun = 0;
-const maxProgressQuestions = 20; // full bar at 20 correct answers
+const maxProgressQuestions = 20;
 
 // Quiz state loaded from JSON
 let questionsByCategory = {};
@@ -96,7 +96,6 @@ function resetGame() {
   isGameOver = false;
   pendingQuestion = false;
 
-  correctThisRun = 0;
   setProgress(0);
 
   placeFood();
@@ -280,8 +279,7 @@ function handleAnswer(selectedIndex) {
 
   if (isCorrect) {
     score += 5;
-    correctThisRun += 1;
-    setProgress(correctThisRun);
+    setProgress(correctThisRun + 1);
     quizFeedbackEl.textContent = "Correct! +5 points.";
     vibrate(120);
   } else {
@@ -333,35 +331,6 @@ startBtn.addEventListener("click", () => {
   topicWarning.textContent = "";
 
   currentCategoryKey = selected;
-
-  // -------- Touch controls (mobile) --------
-const btnUp = document.getElementById("btn-up");
-const btnDown = document.getElementById("btn-down");
-const btnLeft = document.getElementById("btn-left");
-const btnRight = document.getElementById("btn-right");
-
-function setDirectionFromButton(dx, dy) {
-  // misma lógica de prohibir giro de 180°
-  if (dx === 0 && dy === -1 && direction.y !== 1) {
-    nextDirection = { x: 0, y: -1 };
-  } else if (dx === 0 && dy === 1 && direction.y !== -1) {
-    nextDirection = { x: 0, y: 1 };
-  } else if (dx === -1 && dy === 0 && direction.x !== 1) {
-    nextDirection = { x: -1, y: 0 };
-  } else if (dx === 1 && dy === 0 && direction.x !== -1) {
-    nextDirection = { x: 1, y: 0 };
-  }
-}
-
-if (btnUp) {
-  btnUp.addEventListener("click", () => setDirectionFromButton(0, -1));
-  btnDown.addEventListener("click", () => setDirectionFromButton(0, 1));
-  btnLeft.addEventListener("click", () => setDirectionFromButton(-1, 0));
-  btnRight.addEventListener("click", () => setDirectionFromButton(1, 0));
-}
-
-  // For now: expect questions.json to have top-level keys: geography, culture, history
-  // and each key to hold an array of questions.
   currentCategoryQuestions = questionsByCategory[currentCategoryKey] || [];
   currentQuestionIndex = -1;
 
