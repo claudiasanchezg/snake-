@@ -101,7 +101,7 @@
 
     #level-fill {
       width: 100%;
-      height: 10%;
+      height: 0%;
       background: linear-gradient(#1affff, #00ff7f);
     }
 
@@ -120,36 +120,6 @@
     }
 
     #start-btn:hover {
-      background: #041a4a;
-    }
-
-    /* Botones táctiles (ocultos en escritorio) */
-    #touch-controls {
-      margin-top: 8px;
-      display: none; /* se muestra solo en móvil */
-    }
-
-    .touch-row {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .touch-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 6px;
-      border: 1px solid #1affff;
-      background: #020230;
-      color: #fefefe;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .touch-btn:active {
       background: #041a4a;
     }
 
@@ -212,40 +182,20 @@
       min-height: 1em;
     }
 
-    /* SOLO móvil: layout y botones táctiles */
+    /* Responsive tweak: stack board + bar on narrow screens */
     @media (max-width: 600px) {
-  #game-row {
-    flex-direction: column;
-    align-items: center;
-  }
+      #game-row {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  /* Smaller canvas on phones */
-  #game {
-    width: 260px;
-    height: 260px;
-  }
+      #level-bar {
+        height: 120px;
+      }
 
-  /* Smaller progress bar */
-  #level-bar {
-    height: 90px;
-  }
-
-  /* Smaller touch buttons */
-  .touch-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-
-  /* Slightly tighter gaps */
-  .touch-row {
-    gap: 6px;
-  }
-}
-
-
-      #touch-controls {
-        display: block;
+      #game {
+        max-width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -253,7 +203,7 @@
 <body>
   <h1>Culture Snake / Comecocos Quiz</h1>
   <div id="info">
-    Use the arrow keys or touch arrows to move. Every time you eat a glowing dot, answer a short multiple-choice question.
+    Use the arrow keys to move. Every time you eat a glowing dot, answer a short multiple-choice question.
   </div>
 
   <div id="scoreboard">
@@ -284,18 +234,6 @@
   </div>
 
   <button id="start-btn">Start / Restart</button>
-
-  <!-- Controles táctiles (solo móvil) -->
-  <div id="touch-controls">
-    <div class="touch-row">
-      <button class="touch-btn" id="btn-up">▲</button>
-    </div>
-    <div class="touch-row">
-      <button class="touch-btn" id="btn-left">◀</button>
-      <button class="touch-btn" id="btn-down">▼</button>
-      <button class="touch-btn" id="btn-right">▶</button>
-    </div>
-  </div>
 
   <!-- Quiz modal -->
   <div id="quiz-modal">
