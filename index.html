@@ -182,6 +182,54 @@
       min-height: 1em;
     }
 
+    /* Level-up modal */
+    #levelup-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+    }
+
+    #levelup-box {
+      background: #020230;
+      border: 2px solid #1affff;
+      padding: 18px 20px;
+      max-width: 280px;
+      width: 90%;
+      box-shadow: 0 0 14px #1affff;
+      color: #fefefe;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    #levelup-box h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    #levelup-box p {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    #levelup-close {
+      padding: 6px 14px;
+      border-radius: 4px;
+      border: 1px solid #1affff;
+      background: #041a4a;
+      color: #fefefe;
+      cursor: pointer;
+    }
+
+    #levelup-close:hover {
+      background: #06246b;
+    }
+
     /* Responsive tweak: stack board + bar on narrow screens */
     @media (max-width: 600px) {
       #game-row {
@@ -229,8 +277,7 @@
       <div id="level-bar">
         <div id="level-fill"></div>
       </div>
-<div id="level-text">0%</div>
-
+      <div id="level-text">0%</div>
     </div>
   </div>
 
@@ -245,7 +292,17 @@
     </div>
   </div>
 
+  <!-- Level-up modal -->
+  <div id="levelup-modal">
+    <div id="levelup-box">
+      <h2 id="levelup-title">Level up!</h2>
+      <p id="levelup-message">You reached 50 points!</p>
+      <button id="levelup-close">Continue</button>
+    </div>
+  </div>
+
   <!-- Game logic -->
   <script src="main.js"></script>
 </body>
 </html>
+
