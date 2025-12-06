@@ -333,10 +333,10 @@ function handleAnswer(selectedIndex) {
   // Level-up popups at 50 and 100 points (game continues)
   if (!hasReached50 && score >= 50) {
     hasReached50 = true;
-    showLevelUp("Congratulations!", "You reached 50 points and passed to the next level!");
+    showLevelUp("Congratulations!", "You passed to the next level!");
   } else if (!hasReached100 && score >= 100) {
     hasReached100 = true;
-    showLevelUp("Amazing!", "You reached 100 points! Next level unlocked!");
+    showLevelUp("Amazing!", "You reached 100%! Next level unlocked!");
   }
 
   setTimeout(() => {
