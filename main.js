@@ -11,6 +11,13 @@ const startBtn = document.getElementById("start-btn");
 const topicSelect = document.getElementById("topic-select");
 const topicWarning = document.getElementById("topic-warning");
 
+const levelFill = document.getElementById("level-fill");
+const levelText = document.getElementById("level-text");
+
+let currentLevel = 1;
+const maxLevels = 10;
+
+
 // Quiz DOM
 const quizModal = document.getElementById("quiz-modal");
 const quizQuestionEl = document.getElementById("quiz-question");
@@ -59,6 +66,14 @@ fetch("questions.json")
 function randomInt(min, maxExclusive) {
   return Math.floor(Math.random() * (maxExclusive - min)) + min;
 }
+
+function setLevel(newLevel) {
+  currentLevel = Math.max(1, Math.min(maxLevels, newLevel));
+  const percent = (currentLevel / maxLevels) * 100;
+  levelFill.style.height = percent + "%";
+  levelText.textContent = currentLevel + " / " + maxLevels;
+}
+
 
 // Optional vibration helper (safe on unsupported devices)
 function vibrate(pattern) {
