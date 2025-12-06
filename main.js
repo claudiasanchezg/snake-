@@ -21,6 +21,12 @@ const quizQuestionEl = document.getElementById("quiz-question");
 const quizOptionsEl = document.getElementById("quiz-options");
 const quizFeedbackEl = document.getElementById("quiz-feedback");
 
+// Level-up modal DOM (new)
+const levelupModal = document.getElementById("levelup-modal");
+const levelupTitle = document.getElementById("levelup-title");
+const levelupMessage = document.getElementById("levelup-message");
+const levelupClose = document.getElementById("levelup-close");
+
 // Grid configuration
 const tileSize = 20; // 20px * 20 tiles = 400px
 const tilesX = canvas.width / tileSize;
@@ -85,6 +91,33 @@ function setProgress(correctCount) {
   levelText.textContent = percent + "%";
 }
 
+// -------- Level-up modal helpers --------
+function showLevelUp(title, message) {
+  levelupTitle.textContent = title;
+  levelupMessage.textContent = message;
+
+  // pause game
+  pendingQuestion = true;
+  if (gameInterval) {
+    clearInterval(gameInterval);
+    gameInterval = null;
+  }
+
+  levelupModal.style.display = "flex";
+}
+
+function hideLevelUp() {
+  levelupModal.style.display = "none";
+  pendingQuestion = false;
+
+  if (!isGameOver && !gameInterval) {
+    gameInterval = setInterval(gameLoop, gameSpeedMs);
+  }
+}
+
+levelupClose.addEventListener("click", hideLevelUp);
+
+// -------- Game reset --------
 function resetGame() {
   score = 0;
   scoreEl.textContent = score;
@@ -297,20 +330,21 @@ function handleAnswer(selectedIndex) {
   }
   scoreEl.textContent = score;
 
-  // Level-up messages at 50 and 100 points (game continues)
+  // Level-up popups at 50 and 100 points (game continues)
   if (!hasReached50 && score >= 50) {
     hasReached50 = true;
-    quizFeedbackEl.textContent = "Great! You reached 50 points. Level up!";
+    showLevelUp("Congratulations!", "You reached 50 points and passed to the next level!");
   } else if (!hasReached100 && score >= 100) {
     hasReached100 = true;
-    quizFeedbackEl.textContent = "Amazing! You reached 100 points!";
+    showLevelUp("Amazing!", "You reached 100 points! Next level unlocked!");
   }
 
   setTimeout(() => {
     quizModal.style.display = "none";
     pendingQuestion = false;
 
-    if (!isGameOver && !gameInterval) {
+    if (!isGameOver && !gameInterval && levelupModal.style.display !== "flex") {
+      // only resume game if no level-up modal is open
       gameInterval = setInterval(gameLoop, gameSpeedMs);
     }
   }, 900);
@@ -341,3 +375,20 @@ startBtn.addEventListener("click", () => {
   }
 
   const selected = topicSelect.value;
+  topicWarning.textContent = "";
+
+  if (!selected || !questionsByCategory[selected]) {
+    topicWarning.textContent = "Please choose a topic before starting.";
+    return;
+  }
+
+  currentCategoryKey = selected;
+  currentCategoryQuestions = questionsByCategory[selected];
+
+  resetGame();
+
+  if (gameInterval) {
+    clearInterval(gameInterval);
+  }
+  gameInterval = setInterval(gameLoop, gameSpeedMs);
+});
