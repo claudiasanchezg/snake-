@@ -41,6 +41,10 @@ let isGameOver = false;
 let correctThisRun = 0;
 const maxProgressQuestions = 20;
 
+// Level-up flags based on score
+let hasReached50 = false;
+let hasReached100 = false;
+
 // Quiz state loaded from JSON
 let questionsByCategory = {};
 let currentCategoryKey = "";
@@ -76,9 +80,9 @@ function vibrate(pattern) {
 function setProgress(correctCount) {
   correctThisRun = correctCount;
   const capped = Math.min(correctThisRun, maxProgressQuestions);
-  const percent = (capped / maxProgressQuestions) * 100;
+  const percent = Math.round((capped / maxProgressQuestions) * 100);
   levelFill.style.height = percent + "%";
-  levelText.textContent = capped + " / " + maxProgressQuestions;
+  levelText.textContent = percent + "%";
 }
 
 function resetGame() {
@@ -96,7 +100,11 @@ function resetGame() {
   isGameOver = false;
   pendingQuestion = false;
 
+  correctThisRun = 0;
   setProgress(0);
+
+  hasReached50 = false;
+  hasReached100 = false;
 
   placeFood();
   drawGame();
@@ -289,6 +297,15 @@ function handleAnswer(selectedIndex) {
   }
   scoreEl.textContent = score;
 
+  // Level-up messages at 50 and 100 points (game continues)
+  if (!hasReached50 && score >= 50) {
+    hasReached50 = true;
+    quizFeedbackEl.textContent = "Great! You reached 50 points. Level up!";
+  } else if (!hasReached100 && score >= 100) {
+    hasReached100 = true;
+    quizFeedbackEl.textContent = "Amazing! You reached 100 points!";
+  }
+
   setTimeout(() => {
     quizModal.style.display = "none";
     pendingQuestion = false;
@@ -324,21 +341,3 @@ startBtn.addEventListener("click", () => {
   }
 
   const selected = topicSelect.value;
-  if (!selected) {
-    topicWarning.textContent = "Please choose a topic before starting.";
-    return;
-  }
-  topicWarning.textContent = "";
-
-  currentCategoryKey = selected;
-  currentCategoryQuestions = questionsByCategory[currentCategoryKey] || [];
-  currentQuestionIndex = -1;
-
-  resetGame();
-  if (gameInterval) clearInterval(gameInterval);
-  gameInterval = setInterval(gameLoop, gameSpeedMs);
-});
-
-// Initial static draw
-resetGame();
-
