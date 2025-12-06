@@ -76,10 +76,11 @@ function vibrate(pattern) {
 function setProgress(correctCount) {
   correctThisRun = correctCount;
   const capped = Math.min(correctThisRun, maxProgressQuestions);
-  const percent = (capped / maxProgressQuestions) * 100;
+  const percent = Math.round((capped / maxProgressQuestions) * 100);
   levelFill.style.height = percent + "%";
-  levelText.textContent = capped + " / " + maxProgressQuestions;
+  levelText.textContent = percent + "%";
 }
+
 
 function resetGame() {
   score = 0;
