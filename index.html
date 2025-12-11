@@ -36,18 +36,20 @@
       font-size: 1rem;
     }
 
+    /* topic on top, centered column */
     #controls {
-      margin-bottom: 4px;
+      margin-top: 16px;
+      margin-bottom: 16px;
       font-size: 0.9rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      gap: 6px;
     }
 
     #topic-select {
       padding: 4px 6px;
+      min-width: 260px;
       border-radius: 4px;
       border: 1px solid #1affff;
       background: #020230;
@@ -65,11 +67,13 @@
       text-align: center;
     }
 
+    /* board in the middle */
     #game-row {
-      margin-top: 4px;
+      margin: 16px 0;
       display: flex;
-      gap: 12px;
-      align-items: flex-start;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
     }
 
     #game {
@@ -109,8 +113,9 @@
       margin-top: 2px;
     }
 
+    /* start button under the board */
     #start-btn {
-      margin-top: 8px;
+      margin-top: 16px;
       padding: 6px 14px;
       border-radius: 4px;
       border: 1px solid #1affff;
