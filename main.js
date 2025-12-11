@@ -1,4 +1,4 @@
-// Culture Snake / Comecocos with quiz questions, topics and progress bar
+// Culture Snake 
 
 // ---------- Canvas and UI ----------
 const canvas = document.getElementById("game");
@@ -62,8 +62,7 @@ let pendingQuestion = false;
 // Map topic values from <select> to JSON file paths (keys are lowercase)
 const topicToFile = {
   history: "questions-history.json",
-  geography: "questions-geography.json",
-  culture: "questions-culture.json" // create this file or remove the option
+  geography: "questions-geography.json"
 };
 
 
