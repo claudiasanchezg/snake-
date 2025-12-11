@@ -97,12 +97,13 @@
       "options": ["Code of Hammurabi", "Twelve Tables", "Magna Carta"],
       "correctIndex": 0
     },
-     "text": "Which empire was ruled for centuries from the city of Constantinople (now Istanbul)?",
+    {
+      "text": "Which empire was ruled for centuries from the city of Constantinople (now Istanbul)?",
       "options": ["Byzantine Empire", "Frankish Empire", "Mughal Empire"],
       "correctIndex": 0
     },
     {
-      "text": "Which 14th‑century pandemic killed millions of people across Europe and is known as the Black Death?",
+      "text": "Which 14th-century pandemic killed millions of people across Europe and is known as the Black Death?",
       "options": ["Influenza", "Bubonic plague", "Typhus"],
       "correctIndex": 1
     },
@@ -142,12 +143,12 @@
       "correctIndex": 1
     },
     {
-      "text": "Which 16th‑century religious movement split Western Christianity and led to the rise of Protestant churches?",
-      "options": ["Counter‑Reformation", "Protestant Reformation", "Great Schism"],
+      "text": "Which 16th-century religious movement split Western Christianity and led to the rise of Protestant churches?",
+      "options": ["Counter-Reformation", "Protestant Reformation", "Great Schism"],
       "correctIndex": 1
     },
     {
-      "text": "Which German monk is associated with the Ninety‑Five Theses and criticism of indulgences in 1517?",
+      "text": "Which German monk is associated with the Ninety-Five Theses and criticism of indulgences in 1517?",
       "options": ["Martin Luther", "John Calvin", "Jan Hus"],
       "correctIndex": 0
     },
@@ -157,7 +158,7 @@
       "correctIndex": 0
     },
     {
-      "text": "Which 18th‑century intellectual movement emphasized reason, science, and individual rights in Europe?",
+      "text": "Which 18th-century intellectual movement emphasized reason, science, and individual rights in Europe?",
       "options": ["Romanticism", "Enlightenment", "Scholasticism"],
       "correctIndex": 1
     },
@@ -172,7 +173,7 @@
       "correctIndex": 0
     },
     {
-      "text": "Which 19th‑century statesman is known as the “Iron Chancellor” and key architect of German unification?",
+      "text": "Which 19th-century statesman is known as the “Iron Chancellor” and key architect of German unification?",
       "options": ["Giuseppe Garibaldi", "Otto von Bismarck", "Klemens von Metternich"],
       "correctIndex": 1
     },
@@ -187,13 +188,13 @@
       "correctIndex": 0
     },
     {
-      "text": "Which alliance did Germany, Austria‑Hungary, and the Ottoman Empire belong to during World War I?",
+      "text": "Which alliance did Germany, Austria-Hungary, and the Ottoman Empire belong to during World War I?",
       "options": ["Allied Powers", "Central Powers", "Triple Entente"],
       "correctIndex": 1
     },
     {
       "text": "Which 1919 treaty formally ended the war between Germany and the Allied Powers after World War I?",
-      "options": ["Treaty of Brest‑Litovsk", "Treaty of Versailles", "Treaty of Paris"],
+      "options": ["Treaty of Brest-Litovsk", "Treaty of Versailles", "Treaty of Paris"],
       "correctIndex": 1
     },
     {
@@ -208,7 +209,7 @@
     },
     {
       "text": "What name is given to the Allied landings in Normandy in June 1944?",
-      "options": ["Operation Barbarossa", "Operation Overlord (D‑Day)", "Operation Torch"],
+      "options": ["Operation Barbarossa", "Operation Overlord (D-Day)", "Operation Torch"],
       "correctIndex": 1
     },
     {
@@ -233,7 +234,7 @@
     },
     {
       "text": "Which multinational state in southeastern Europe broke up in the 1990s into republics such as Croatia, Slovenia, and Serbia?",
-      "options": ["Czechoslovakia", "Yugoslavia", "Austro‑Hungarian Empire"],
+      "options": ["Czechoslovakia", "Yugoslavia", "Austro-Hungarian Empire"],
       "correctIndex": 1
     },
     {
@@ -246,7 +247,7 @@
       "options": ["Ireland", "United Kingdom", "Denmark"],
       "correctIndex": 1
     },
-      {
+    {
       "text": "Which 1555 agreement in the Holy Roman Empire allowed each prince to choose between Lutheranism and Catholicism for his territory?",
       "options": ["Peace of Augsburg", "Edict of Nantes", "Peace of Westphalia"],
       "correctIndex": 0
@@ -298,4 +299,3 @@
     }
   ]
 }
-
