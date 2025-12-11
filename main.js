@@ -52,20 +52,19 @@ let hasReached50 = false;
 let hasReached100 = false;
 
 // ---------- Quiz state and loading ----------
-// Cache of questions already loaded: { History: [...], Geography: [...], ... }
+// Cache of questions already loaded: { history: [...], geography: [...], ... }
 let questionsByCategory = {};
 let currentCategoryKey = "";
 let currentCategoryQuestions = [];
 let currentQuestionIndex = -1;
 let pendingQuestion = false;
 
-// Map topic values from <select> to JSON file paths
+// Map topic values from <select> to JSON file paths (keys are lowercase)
 const topicToFile = {
   history: "questions/history.json",
   geography: "questions/geography.json",
   culture: "questions/culture.json"
 };
-
 
 // ---------- Helpers ----------
 function randomInt(min, maxExclusive) {
@@ -375,9 +374,10 @@ window.addEventListener("keydown", e => {
     nextDirection = { x: 1, y: 0 };
   }
 });
+
 startBtn.addEventListener("click", () => {
   const selectedRaw = topicSelect.value;
-  const selected = selectedRaw.trim().toLowerCase();  // normalize
+  const selected = selectedRaw.trim().toLowerCase(); // normalize
 
   if (!selected) {
     topicWarning.textContent = "Please choose a topic before starting.";
@@ -391,38 +391,6 @@ startBtn.addEventListener("click", () => {
   }
 
   topicWarning.textContent = "";
-
-  // If this category was already loaded once, reuse it
-  if (questionsByCategory[selected]) {
-    currentCategoryKey = selected;
-    currentCategoryQuestions = questionsByCategory[selected];
-    startGameWithCurrentCategory();
-    return;
-  }
-
-  // Load questions from the corresponding JSON file
-  topicWarning.textContent = "Loading questions, please wait...";
-  fetch(file)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error("HTTP " + res.status);
-      }
-      return res.json();
-    })
-    .then(data => {
-      // data should be an array of { text, options, correctIndex }
-      questionsByCategory[selected] = data;
-      currentCategoryKey = selected;
-      currentCategoryQuestions = data;
-      topicWarning.textContent = "";
-      startGameWithCurrentCategory();
-    })
-    .catch(err => {
-      console.error("Error loading questions:", err);
-      topicWarning.textContent = "Could not load questions for this topic.";
-    });
-});
-
 
   // If this category was already loaded once, reuse it
   if (questionsByCategory[selected]) {
