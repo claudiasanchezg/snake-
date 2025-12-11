@@ -1,0 +1,312 @@
+[
+  {
+    "text": "What is the capital of France?",
+    "options": ["Paris", "Lyon", "Marseille"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Spain?",
+    "options": ["Madrid", "Barcelona", "Seville"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Italy?",
+    "options": ["Rome", "Milan", "Naples"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Germany?",
+    "options": ["Berlin", "Munich", "Hamburg"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of the United Kingdom?",
+    "options": ["London", "Manchester", "Edinburgh"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Portugal?",
+    "options": ["Lisbon", "Porto", "Coimbra"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Greece?",
+    "options": ["Athens", "Thessaloniki", "Patras"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Russia?",
+    "options": ["Moscow", "Saint Petersburg", "Kazan"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Turkey?",
+    "options": ["Ankara", "Istanbul", "Izmir"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Egypt?",
+    "options": ["Cairo", "Alexandria", "Giza"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Nigeria?",
+    "options": ["Abuja", "Lagos", "Kano"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of South Africa?",
+    "options": ["Pretoria", "Cape Town", "Johannesburg"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Kenya?",
+    "options": ["Nairobi", "Mombasa", "Kisumu"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Ethiopia?",
+    "options": ["Addis Ababa", "Gondar", "Dire Dawa"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of India?",
+    "options": ["New Delhi", "Mumbai", "Bengaluru"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of China?",
+    "options": ["Beijing", "Shanghai", "Guangzhou"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Japan?",
+    "options": ["Tokyo", "Osaka", "Kyoto"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of South Korea?",
+    "options": ["Seoul", "Busan", "Incheon"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Australia?",
+    "options": ["Canberra", "Sydney", "Melbourne"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of New Zealand?",
+    "options": ["Wellington", "Auckland", "Christchurch"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Canada?",
+    "options": ["Ottawa", "Toronto", "Vancouver"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of the United States of America?",
+    "options": ["Washington, D.C.", "New York City", "Chicago"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Mexico?",
+    "options": ["Mexico City", "Guadalajara", "Monterrey"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Brazil?",
+    "options": ["Brasília", "Rio de Janeiro", "São Paulo"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Argentina?",
+    "options": ["Buenos Aires", "Córdoba", "Rosario"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Chile?",
+    "options": ["Santiago", "Valparaíso", "Concepción"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Peru?",
+    "options": ["Lima", "Cusco", "Arequipa"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Colombia?",
+    "options": ["Bogotá", "Medellín", "Cali"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Sweden?",
+    "options": ["Stockholm", "Gothenburg", "Malmö"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Norway?",
+    "options": ["Oslo", "Bergen", "Trondheim"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Finland?",
+    "options": ["Helsinki", "Turku", "Tampere"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Denmark?",
+    "options": ["Copenhagen", "Aarhus", "Odense"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of the Netherlands?",
+    "options": ["Amsterdam", "The Hague", "Rotterdam"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Belgium?",
+    "options": ["Brussels", "Antwerp", "Ghent"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Switzerland?",
+    "options": ["Bern", "Zurich", "Geneva"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Poland?",
+    "options": ["Warsaw", "Kraków", "Gdańsk"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Czechia (Czech Republic)?",
+    "options": ["Prague", "Brno", "Ostrava"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Austria?",
+    "options": ["Vienna", "Salzburg", "Graz"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Hungary?",
+    "options": ["Budapest", "Debrecen", "Szeged"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Romania?",
+    "options": ["Bucharest", "Cluj-Napoca", "Timișoara"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Ukraine?",
+    "options": ["Kyiv", "Lviv", "Odessa"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Saudi Arabia?",
+    "options": ["Riyadh", "Jeddah", "Mecca"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Israel?",
+    "options": ["Jerusalem", "Tel Aviv", "Haifa"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Thailand?",
+    "options": ["Bangkok", "Chiang Mai", "Phuket"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Indonesia?",
+    "options": ["Jakarta", "Surabaya", "Bandung"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Vietnam?",
+    "options": ["Hanoi", "Ho Chi Minh City", "Da Nang"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of the Philippines?",
+    "options": ["Manila", "Cebu", "Davao"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Pakistan?",
+    "options": ["Islamabad", "Karachi", "Lahore"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Iran?",
+    "options": ["Tehran", "Isfahan", "Shiraz"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the capital of Iraq?",
+    "options": ["Baghdad", "Basra", "Mosul"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which river flows through the city of Cairo?",
+    "options": ["Nile", "Amazon", "Danube"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which river flows through the city of London?",
+    "options": ["Thames", "Seine", "Rhine"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which river flows through the city of Paris?",
+    "options": ["Seine", "Rhône", "Loire"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which mountain range separates France from Spain?",
+    "options": ["Pyrenees", "Alps", "Carpathians"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which mountain range runs along the western coast of South America?",
+    "options": ["Andes", "Rockies", "Alps"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which desert covers much of northern Africa?",
+    "options": ["Sahara Desert", "Gobi Desert", "Kalahari Desert"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which is the largest ocean on Earth?",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which continent is sometimes called the \"Red Continent\" because of its soil color in many regions?",
+    "options": ["Australia", "Africa", "South America"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which European city is famous for its canals and is sometimes called the \"City of Canals\"?",
+    "options": ["Venice", "Bruges", "Hamburg"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which country is both in Europe and Asia and has Istanbul as its largest city?",
+    "options": ["Turkey", "Russia", "Kazakhstan"],
+    "correctIndex": 0
+  },
+  {
+    "text": "The Great Barrier Reef lies off the northeastern coast of which country?",
+    "options": ["Australia", "Indonesia", "South Africa"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Mount Everest lies in the mountain range shared mainly by Nepal and which region of China?",
+    "options": ["Tibet", "Xinjiang", "Inner Mongolia"],
+    "correctIndex": 0
+  }
+]
