@@ -1,5 +1,55 @@
 [
   {
+    "text": "Who painted the Mona Lisa?",
+    "options": ["Michelangelo", "Leonardo da Vinci", "Raphael"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Who painted The Starry Night?",
+    "options": ["Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Where is the Mona Lisa displayed?",
+    "options": ["The Louvre in Paris", "The Uffizi in Florence", "The Prado in Madrid"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Who painted the ceiling of the Sistine Chapel?",
+    "options": ["Leonardo da Vinci", "Raphael", "Michelangelo"],
+    "correctIndex": 2
+  },
+  {
+    "text": "Who painted the famous artwork 'The Scream'?",
+    "options": ["Edvard Munch", "Vincent van Gogh", "Paul Gauguin"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Which artist is famous for painting Campbell's Soup Cans?",
+    "options": ["Jackson Pollock", "Andy Warhol", "Roy Lichtenstein"],
+    "correctIndex": 1
+  },
+  {
+    "text": "What fruit is depicted in Magritte's painting 'The Son of Man'?",
+    "options": ["Orange", "Apple", "Pear"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Which artist is known for painting water lilies?",
+    "options": ["Claude Monet", "Pierre-Auguste Renoir", "Edgar Degas"],
+    "correctIndex": 0
+  },
+  {
+    "text": "Who wrote the novel 'Les Misérables'?",
+    "options": ["Alexandre Dumas", "Victor Hugo", "Gustave Flaubert"],
+    "correctIndex": 1
+  },
+  {
+    "text": "What is the Japanese art of paper folding called?",
+    "options": ["Origami", "Ikebana", "Calligraphy"],
+    "correctIndex": 0
+  }
+  {
     "text": "Who painted Guernica?",
     "options": ["Salvador Dalí", "Pablo Picasso", "Joan Miró"],
     "correctIndex": 1
