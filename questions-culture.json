@@ -99,4 +99,55 @@
     "options": ["Miguel de Cervantes", "Lope de Vega", "Tirso de Molina"],
     "correctIndex": 0
   }
+  {
+    "text": "Which composer wrote 'The Four Seasons'?",
+    "options": ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Antonio Vivaldi"],
+    "correctIndex": 2
+  },
+  {
+    "text": "Where is the famous Leaning Tower located?",
+    "options": ["Venice", "Pisa", "Florence"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Which composer wrote the opera 'The Marriage of Figaro'?",
+    "options": ["Wolfgang Amadeus Mozart", "Giuseppe Verdi", "Giacomo Puccini"],
+    "correctIndex": 0
+  },
+  {
+    "text": "In which city would you find the Acropolis?",
+    "options": ["Rome", "Athens", "Istanbul"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Who composed the famous 'Moonlight Sonata'?",
+    "options": ["Mozart", "Ludwig van Beethoven", "Chopin"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Which famous monument is located in Agra, India?",
+    "options": ["Red Fort", "Taj Mahal", "Golden Temple"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Which composer is known for 'The Barber of Seville' opera?",
+    "options": ["Gioachino Rossini", "Georges Bizet", "Richard Wagner"],
+    "correctIndex": 0
+  },
+  {
+    "text": "What is the name of the ancient Roman amphitheater in Rome?",
+    "options": ["The Pantheon", "The Forum", "The Colosseum"],
+    "correctIndex": 2
+  },
+  {
+    "text": "Which composer wrote the famous '9th Symphony' featuring 'Ode to Joy'?",
+    "options": ["Mozart", "Bach", "Beethoven"],
+    "correctIndex": 2
+  },
+  {
+    "text": "In which Spanish city is the famous Sagrada Família cathedral?",
+    "options": ["Madrid", "Barcelona", "Seville"],
+    "correctIndex": 1
+  }
 ]
+
